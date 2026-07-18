@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://36t3wykdl3ga"]
+
+[ext_resource type="Texture2D" uid="uid://ddp3dr0px11qa" path="res://Assets/PNG/Double/tile_grey.png" id="1_2166m"]
+[ext_resource type="Texture2D" uid="uid://pdtl74nrh8c7" path="res://Assets/PNG/Double/tile_exclamation.png" id="2_up8vd"]
+
+[node name="Upgrade Box" type="Node2D" unique_id=1133569654]
+
+[node name="TileGrey" type="Sprite2D" parent="." unique_id=1449770938]
+visible = false
+texture = ExtResource("1_2166m")
+
+[node name="TileExclamation" type="Sprite2D" parent="." unique_id=50522434]
+texture = ExtResource("2_up8vd")

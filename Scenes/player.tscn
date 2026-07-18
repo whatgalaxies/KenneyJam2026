@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dde81nwwegqke"]
+
+[ext_resource type="PackedScene" uid="uid://beuscwr4tffqu" path="res://Scenes/blue.tscn" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://bp5xb2j3fxp6t" path="res://Scripts/player.gd" id="1_onrkg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4flbx"]
+radius = 77.67541
+height = 155.35081
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=42097730]
+script = ExtResource("1_onrkg")
+
+[node name="Blue" parent="." unique_id=1794099485 instance=ExtResource("1_4flbx")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=546655146]
+position = Vector2(0, 12.000001)
+scale = Vector2(1.0125192, 0.6469403)
+shape = SubResource("CapsuleShape2D_4flbx")

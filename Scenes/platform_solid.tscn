@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://b0oh812ww75hv"]
+
+[ext_resource type="Texture2D" uid="uid://cwwkpvxdjf3s4" path="res://Assets/PNG/Default/tile_left.png" id="1_csrpu"]
+[ext_resource type="Texture2D" uid="uid://dnvliah5v40vs" path="res://Assets/PNG/Default/tile_right.png" id="2_m6xg8"]
+[ext_resource type="Texture2D" uid="uid://b381mrylhvw0l" path="res://Assets/PNG/Default/tile_center.png" id="3_sx065"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xadyu"]
+size = Vector2(230, 38)
+
+[node name="Platform Solid" type="Node2D" unique_id=1209147278]
+
+[node name="TileLeft" type="Sprite2D" parent="." unique_id=2047801601]
+position = Vector2(-95.00001, 0)
+scale = Vector2(0.5236215, 0.5236215)
+texture = ExtResource("1_csrpu")
+
+[node name="TileRight" type="Sprite2D" parent="." unique_id=1818414391]
+position = Vector2(95.00001, 0)
+scale = Vector2(0.5236215, 0.5236215)
+texture = ExtResource("2_m6xg8")
+
+[node name="TileCenter" type="Sprite2D" parent="." unique_id=1690746654]
+scale = Vector2(1.866138, 0.5236215)
+texture = ExtResource("3_sx065")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1384806907]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=509355790]
+physics_interpolation_mode = 1
+shape = SubResource("RectangleShape2D_xadyu")
+one_way_collision = true

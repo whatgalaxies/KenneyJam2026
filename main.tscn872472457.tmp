@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://cjtbdv2km0a2l"]
+
+[ext_resource type="PackedScene" uid="uid://dde81nwwegqke" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://c0utay78b52s5" path="res://Assets/spritesheet_double.png" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://cfax6o22q4lxs" path="res://Assets/PNG/Double/tile_background_tree_large.png" id="3_1bvp3"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ig7tw"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2yge"]
+texture = ExtResource("2_0xm2m")
+texture_region_size = Vector2i(160, 160)
+2:1/0 = 0
+2:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_1bvp3"]
+sources/0 = SubResource("TileSetAtlasSource_h2yge")
+
+[node name="Game" type="Node2D" unique_id=552111781]
+
+[node name="CharacterBody2D" parent="." unique_id=42097730 instance=ExtResource("1_ig7tw")]
+position = Vector2(560, 363)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=134562253]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=315859807]
+position = Vector2(564, 582)
+shape = SubResource("WorldBoundaryShape2D_ig7tw")
+
+[node name="TileMap" type="TileMap" parent="." unique_id=1671233967]
+position = Vector2(-19, 384.99997)
+scale = Vector2(0.36, 0.36)
+tile_set = SubResource("TileSet_1bvp3")
+format = 2
+layer_0/tile_data = PackedInt32Array(2686980, 131072, 3, 2686990, 131072, 3, 2687000, 131072, 3, 2687010, 131072, 3, 2687020, 131072, 3, 2687030, 131072, 3, 2687040, 131072, 3, 2687050, 131072, 3, 2687060, 131072, 3, 2687070, 131072, 3, 2687080, 131072, 3, 2687090, 131072, 3, 2687100, 131072, 3, 2687110, 131072, 3, 2687120, 131072, 3, 2687130, 131072, 3, 2687140, 131072, 3, 2687150, 131072, 3, 2687160, 131072, 3, 2687170, 131072, 3, 2687180, 131072, 3)
+
+[node name="TileBackgroundTreeLarge2" type="Sprite2D" parent="." unique_id=1421735452]
+position = Vector2(1071, 511)
+scale = Vector2(0.58161247, 0.58161247)
+texture = ExtResource("3_1bvp3")
+
+[node name="TileBackgroundTreeLarge" type="Sprite2D" parent="." unique_id=1521952056]
+position = Vector2(102, 489)
+scale = Vector2(0.7219626, 0.7219626)
+texture = ExtResource("3_1bvp3")
