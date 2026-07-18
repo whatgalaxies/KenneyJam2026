@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://db0yis2u7ua05"]
+
+[ext_resource type="Texture2D" uid="uid://dxrfykloufexu" path="res://Assets/kenney_new-platformer-pack-1.1/Sprites/Tiles/Default/torch_on_a.png" id="1_h1t0l"]
+[ext_resource type="Texture2D" uid="uid://f44xfnlfl6ha" path="res://Assets/kenney_new-platformer-pack-1.1/Sprites/Tiles/Default/torch_on_b.png" id="2_beu3c"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xadyu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_h1t0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_beu3c")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dxr5g"]
+radius = 24.0
+
+[node name="Torch" type="Area2D" unique_id=406002491]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=817726541]
+sprite_frames = SubResource("SpriteFrames_xadyu")
+autoplay = "default"
+frame_progress = 0.49268448
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=967693129]
+shape = SubResource("CircleShape2D_dxr5g")

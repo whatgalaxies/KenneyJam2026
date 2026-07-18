@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://qrft1asbdt1s"]
+
+[ext_resource type="PackedScene" uid="uid://cy6djag7wpj2g" path="res://Scenes/platform.tscn" id="1_23sq3"]
+
+[node name="Scene 1" type="Node2D" unique_id=794476090]
+
+[node name="StaticBody2D" parent="." unique_id=2019210280 instance=ExtResource("1_23sq3")]
+position = Vector2(992, 1056)
+
+[node name="StaticBody2D2" parent="." unique_id=575323764 instance=ExtResource("1_23sq3")]
+position = Vector2(352, 928)
+
+[node name="StaticBody2D3" parent="." unique_id=1652131132 instance=ExtResource("1_23sq3")]
+position = Vector2(1504, 800)
+
+[node name="StaticBody2D4" parent="." unique_id=980917698 instance=ExtResource("1_23sq3")]
+position = Vector2(624, 520)

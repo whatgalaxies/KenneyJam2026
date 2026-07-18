@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://clolf53vq1ci4"]
+
+[ext_resource type="Texture2D" uid="uid://dv1bsixbr86m3" path="res://Assets/kenney_new-platformer-pack-1.1/Sprites/Tiles/Default/coin_gold.png" id="1_jgi06"]
+[ext_resource type="Texture2D" uid="uid://dioba423eb236" path="res://Assets/kenney_new-platformer-pack-1.1/Sprites/Tiles/Default/coin_gold_side.png" id="2_g537i"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xadyu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jgi06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_g537i")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wrm1d"]
+radius = 24.0
+
+[node name="Coin" type="Area2D" unique_id=1175209848]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1322496156]
+sprite_frames = SubResource("SpriteFrames_xadyu")
+autoplay = "default"
+frame_progress = 0.9433105
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1844501528]
+shape = SubResource("CircleShape2D_wrm1d")

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://c75iif2j6e34t"]
+
+[ext_resource type="Script" uid="uid://dspkwo03inxwr" path="res://Scenes/hand_gun.gd" id="1_rtao0"]
+[ext_resource type="Texture2D" uid="uid://kvb5n2f43lhf" path="res://Assets/PNG/Default/blue_hand_point.png" id="1_xmvv3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xadyu"]
+radius = 321.18842
+
+[node name="HandGun" type="Area2D" unique_id=572224083]
+script = ExtResource("1_rtao0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1186031692]
+shape = SubResource("CircleShape2D_xadyu")
+
+[node name="Weapon Pivot" type="Marker2D" parent="." unique_id=917047968]
+
+[node name="BlueHandPoint" type="Sprite2D" parent="Weapon Pivot" unique_id=1113509210]
+position = Vector2(77, 4)
+rotation = 0.5235988
+texture = ExtResource("1_xmvv3")
+
+[node name="ShootingPoint" type="Marker2D" parent="Weapon Pivot/BlueHandPoint" unique_id=782919448]
+unique_name_in_owner = true
+position = Vector2(10.490381, -11.830127)
+rotation = -0.5235988
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=1228775366]
+wait_time = 5.0
+autostart = true

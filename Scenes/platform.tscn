@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cy6djag7wpj2g"]
+
+[ext_resource type="Texture2D" uid="uid://sk8urkffb0gq" path="res://Assets/kenney_new-platformer-pack-1.1/Sprites/Tiles/Default/terrain_snow_horizontal_overhang_left.png" id="1_mrs20"]
+[ext_resource type="Texture2D" uid="uid://cpv11lxp0ylh5" path="res://Assets/kenney_new-platformer-pack-1.1/Sprites/Tiles/Default/terrain_snow_horizontal_overhang_right.png" id="2_mlqre"]
+[ext_resource type="Texture2D" uid="uid://d2tw1i7tcbo0p" path="res://Assets/kenney_new-platformer-pack-1.1/Sprites/Tiles/Default/terrain_snow_horizontal_middle.png" id="3_kul6x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xadyu"]
+size = Vector2(448, 32)
+
+[node name="Platform" type="StaticBody2D" unique_id=2019210280]
+
+[node name="TerrainSnowHorizontalOverhangLeft" type="Sprite2D" parent="." unique_id=1641355820]
+position = Vector2(-192, 0)
+texture = ExtResource("1_mrs20")
+
+[node name="TerrainSnowHorizontalOverhangRight" type="Sprite2D" parent="." unique_id=1275923909]
+position = Vector2(192, 0)
+texture = ExtResource("2_mlqre")
+
+[node name="TerrainSnowHorizontalMiddle" type="Sprite2D" parent="." unique_id=1764823596]
+texture = ExtResource("3_kul6x")
+
+[node name="TerrainSnowHorizontalMiddle2" type="Sprite2D" parent="." unique_id=1711511363]
+texture = ExtResource("3_kul6x")
+
+[node name="TerrainSnowHorizontalMiddle3" type="Sprite2D" parent="." unique_id=714998171]
+position = Vector2(-128, 0)
+texture = ExtResource("3_kul6x")
+
+[node name="TerrainSnowHorizontalMiddle4" type="Sprite2D" parent="." unique_id=434005312]
+position = Vector2(-64, 0)
+texture = ExtResource("3_kul6x")
+
+[node name="TerrainSnowHorizontalMiddle5" type="Sprite2D" parent="." unique_id=2068726424]
+position = Vector2(64, 0)
+texture = ExtResource("3_kul6x")
+
+[node name="TerrainSnowHorizontalMiddle6" type="Sprite2D" parent="." unique_id=33337207]
+position = Vector2(128, 0)
+texture = ExtResource("3_kul6x")
+
+[node name="TerrainSnowHorizontalMiddle7" type="Sprite2D" parent="." unique_id=1490329986]
+position = Vector2(64, 0)
+texture = ExtResource("3_kul6x")
+
+[node name="TerrainSnowHorizontalMiddle8" type="Sprite2D" parent="." unique_id=1110302426]
+position = Vector2(128, 0)
+texture = ExtResource("3_kul6x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=445561148]
+position = Vector2(0, -16)
+shape = SubResource("RectangleShape2D_xadyu")
+one_way_collision = true
