@@ -1,3 +1,31 @@
 [gd_scene format=3 uid="uid://cjtbdv2km0a2l"]
 
-[node name="Node2D" type="Node2D" unique_id=552111781]
+[ext_resource type="PackedScene" uid="uid://dde81nwwegqke" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://c0utay78b52s5" path="res://Assets/spritesheet_double.png" id="2_0xm2m"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ig7tw"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2yge"]
+texture = ExtResource("2_0xm2m")
+texture_region_size = Vector2i(160, 160)
+2:1/0 = 0
+2:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_1bvp3"]
+sources/0 = SubResource("TileSetAtlasSource_h2yge")
+
+[node name="Game" type="Node2D" unique_id=552111781]
+
+[node name="CharacterBody2D" parent="." unique_id=42097730 instance=ExtResource("1_ig7tw")]
+position = Vector2(560, 363)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=134562253]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=315859807]
+position = Vector2(564, 582)
+shape = SubResource("WorldBoundaryShape2D_ig7tw")
+
+[node name="TileMap" type="TileMap" parent="." unique_id=1671233967]
+tile_set = SubResource("TileSet_1bvp3")
+format = 2
+layer_0/tile_data = PackedInt32Array(2686980, 131072, 3, 2686990, 131072, 3, 2687000, 131072, 3, 2687010, 131072, 3, 2687020, 131072, 3, 2687030, 131072, 3, 2687040, 131072, 3, 2687050, 131072, 3)
